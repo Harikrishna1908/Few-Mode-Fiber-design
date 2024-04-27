@@ -26,7 +26,7 @@ Where D = εE and B = μH.The parameter 𝜖 is the permittivity and 𝜇 is the
 Inverse modeling design refers to the process of determining the parameters or properties of a system based on observed or desired behavior. In the context of fiber optics, inverse modeling design involves determining the characteristics of a fiber that 
 would produce a desired optical response or performance. The inverse modelling design for four mode few mode fiber can be divide into two steps forward design and inverse design.
 
-**3.1 Forward Design**
+**3.1 Forward Design:**
 In forward design we have to define the fiber optic parameters like V number, radius of the core and cladding, refractive index of core and cladding, numerical aperture,Effective area and ∆neff . Generated a dataset of 1984 samples by varying the fiber parameters(refractive index of core and core radius) using multiple simulations in COMSOL Multiphysics 
 
 **3.2 Inverse Design:**
@@ -41,7 +41,19 @@ A decision tree is a supervised machine learning algorithm used for both classif
 based on a feature, each branch represents the outcome of the decision, and each leaf node represents the final decision or outcomeIn decision trees, each node represents a feature along with a decision rule (e.g., the ∆neff = 1.9 x 10-3).For continuous data like optical fiber measurements, the decision tree algorithm selects the feature and threshold that best separates the data into different classes (e.g., "desirable" vs. "non-desirable").The decision tree then recursively splits the data based on these thresholds until a stopping criterion is met, such as reaching a maximum tree depth or no further improvement in impurity reduction. This process results in a tree structure where each leaf node represents a class label (e.g., "desirable 
 design" vs. "non-desirable design"), and each internal node represents a decision based on a feature and threshold. Here the threshold ∆neff = 1 x 10-3and the Effective area = 120 µm2 .
 
-**4.2 The Gradient Boosting Algorithm L:**
+**4.2 The Gradient Boosting Algorithm :**
 Gradient boosting is a machine learning technique used for both regression and classification tasks. It's an ensemble learning method that combines the predictions of multiple weak learners, typically decision trees, to create a strong predictive model. The basic idea behind gradient boosting is to sequentially train new models to correct the errors made by the previous models, with each new model focusing on the residuals or errors of the combined ensemble.Gradient boosting starts with a simple weak learner, often a decision tree with only a few splits. This weak learner makes predictions based on the input parameters of the fiber design. The model is trained sequentially, where each new weak learner corrects the errors made by the previous ones. The new weak learner focuses on the data points 
 that were misclassified or had high errors by the existing model.During training, gradient descent optimization is used to minimize a loss function, such as mean squared error or mean absolute error. This loss function measures how far off the model's predictions are from the actual values in the training data. Each weak learner contributes to the final prediction by a certain weight, determined during training. The weights are assigned based on the performance of the weak learner in reducing the overall error of the model. The predictions of all the weak learners are combined to produce the final ensemble prediction. Once the gradient boosting model is trained, it can be used to predict the finest design of the few-mode fiber by inputting various fiber configuration parameters. The model will then output predictions for the fiber properties based on those parameter
+
+**5.BENDING LOSS**
+
+Micro and macro bending losses are fundamental factors contributing to optical fiber 
+attenuation, influencing the performance and reliability of optical communication 
+systems.
+
+Macro bending losses, arise when optical fibers incur bends with radii substantially larger than the fiber diameter, typical of those encountered in fiber cable installations. Initially inconsequential, the excess loss due to minor bends is negligible. However, as 
+the bend radius diminishes, the loss amplifies exponentially until it reaches an observable threshold. This abrupt escalation in loss emanates from the inability of the evanescent field tail to match the pace of the core field during fiber bending. Beyond a critical distance from the fiber center, the evanescent field tail fails to keep pace, leading to radiation of optical energy and consequent attenuation.Conversely, micro bending losses result from random microscopic fluctuations in the fiber axis. These microbends, arising from manufacturing irregularities or lateral pressures during cable deployment, foster mode coupling between guided and leaky modes within the fiber. The recurrent energy coupling between these modes engenders increased attenuation. Employing a compressible jacket over the fiber represents a promising strategy for mitigating microbending losses. This jacket, when subjected to external forces, helps maintain fiber straightness, thereby minimizing the deleterious effects of microbending-induced attenuation.
+
+In essence, macro bending losses stem from pronounced bends in optical fibers, characterized by observable radiative losses beyond a critical radius, while micro bending losses arise from stochastic microscopic bends, precipitating mode coupling 
+and heightened attenuation. A comprehensive comprehension of these bending phenomena is indispensable for optimizing optical communication systems, ensuring enhanced performance and reliability
 .
